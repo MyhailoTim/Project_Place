@@ -1,0 +1,26 @@
+{% extends 'PlaceApp/base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to "My Favorite Places"!</h2>
+    <p>Here you can save your favorite places</p>
+</div>
+
+<div class="random-section">
+    <a href="?random=true" class="btn">Where to go today?</a>
+
+    {% if random_place %}
+    <div class="place-card">
+        <h3><a href="{% url 'place_detail' index=random_place_index %}">{{ random_place.name }}</a></h3>
+        <p><strong>Type:</strong> {{ random_place.place_type }}</p>
+        <p><strong>Location:</strong> {{ random_place.location }}</p>
+        <p><strong>Rating:</strong>
+            {% for i in "12345" %}
+                {% if forloop.counter <= random_place.rating %}✡{% endif %}
+            {% endfor %}
+        </p>
+        <p><strong>Опис:</strong> {{ random_place.description|truncatewords:30 }}</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

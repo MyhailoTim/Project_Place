@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+    line-height: 1.5;
+}
+
+header, footer {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.message {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.place-item,
+.place-card,
+.place-detail {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.hero, .random-section {
+    text-align: center;
+    padding: 20px;
+}

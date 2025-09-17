@@ -1,0 +1,32 @@
+{% extends 'PlaceApp/base.html' %}
+
+{% block content %}
+<h2>Add new place</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" name="name" required>
+    </div>
+    <div class="form-field">
+        <label for="description">Description</label>
+        <textarea name="description" rows="4"></textarea>
+    </div>
+    <div class="form-field">
+        <label for="place_type">Type</label>
+        <input type="text" name="place_type">
+    </div>
+    <div class="form-field">
+        <label for="location">Location</label>
+        <input type="text" name="location">
+    </div>
+    <div class="form-field">
+        <label for="rating">Rating (1-5)</label>
+        <input type="number" name="rating" min="1" max="5" required>
+    </div>
+
+    <button type="submit" class="btn">Save</button>
+    <a href="{% url 'place_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
