@@ -1,0 +1,25 @@
+{% extends 'PlaceApp/base.html' %}
+
+{% block content %}
+<h2>List of my favorite places</h2>
+{% if places %}
+<div class="places-list">
+    {% for place in places %}
+    <div class="place-item">
+        <h3><a href="{% url 'place_detail' index=place.index %}">{{ place.name }}</a></h3>
+        <p><strong>Type:</strong> {{ place.place_type }}</p>
+        <p><strong>Location:</strong> {{ place.location }}</p>
+        <p><strong>Rating:</strong>
+            {% for i in "12345" %}
+                {% if forloop.counter <= place.rating %}✡{% endif %}
+            {% endfor %}
+        </p>
+        <p><strong>Added:</strong> {{ place.created_at }}</p>
+        <p><strong>Description:</strong> {{ place.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>You don't have any places added yet.<a href="{% url 'add_place' %}" class="btn">Add first!</a></p>
+{% endif %}
+{% endblock %}

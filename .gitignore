@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+*.log
+*.pot
+*.pyc
+*.mo
+db.sqlite3
+media/
+staticfiles/
+
+venv/
+ENV/
+.env/
+
+.vscode/
+*.code-workspace
+
+.DS_Store
+
+# PyCharm
+.idea/
+
+*.save
